@@ -21,7 +21,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -33,7 +33,6 @@ p {
 img {
     display: block;
 }
-
 
 /* 上方固定列 */
 
@@ -142,130 +141,145 @@ ol li a:hover {
 
 .top h2 {
     margin-left: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
 
 /* -------------Main------------ */
-main {
-    margin: 0 auto;
-    height: 920px;
-    background-image: url(../img/bat_profile_bgi.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
 
-main ul {
+/* 上方商品圖片與資訊 */
+.top_info {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    margin-top: 56px;
+    padding: 30px 0;
+    border-bottom: 1px solid #B1B1B1;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 48px;
 }
 
-main ul li {
-    flex-basis: 250px;
-    height: 220px;
-    margin: 0 50px 100px 50px;
-}
-
-main img {
-    width: 150px;
-    height: 150px;
+.top_info img {
+    width: 330px;
+    height: 330px;
     object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 28px auto;
+    border-radius: 10px;
+    margin-right: 50px;
 }
 
-main ul li a {
-    color: #634F45;
-    font-family: Arial, Helvetica, sans-serif;
+.top_info_text {
+    margin: 0 70px;
+}
+
+.top_info_text h3{
+    margin-bottom: 8px;
+}
+
+.top_info_text h2{
+    color: #8F7963;
+    margin: 32px 0;   
     font-weight: bold;
 }
 
-.pop_up{
-    cursor: pointer;
+.top_info_text h2 ~ p{
+    margin-bottom: 8px;
 }
 
-/* 燈箱 */
-button {
-    cursor: pointer;
-}
-
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: hsla(0, 0%, 0%, .5);
-}
-
-.none {
-    display: none;
-}
-
-article {
-    background-color: white;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgb(84, 84, 84);
-    padding: 10px;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.shopping{
     display: flex;
-    padding: 40px;
+    margin-top: 124px;
 }
 
-article img {
-    width: 280px;
-    height: 280px;
-    border-radius: 10px;
-    margin: auto 0;
+.shopL{
+    margin-right: 24px;
 }
 
-.article_text {
-    margin-left: 50px;
+.quantity {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 20px;
+    border: 1px solid #B1B1B1;
+    border-radius: 5px;
 }
 
-.article_text h2{
-    color: #634F45;
+.shopL p{
+    margin-top: 10px;
+    text-align: center;
 }
 
-.article_text p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 24px;
-    width: 260px;
-    line-height: 1.4;
+input[type="number"] {
+    width: 20px;
+    text-align: center;
+    outline: none;
+    border: none;
 }
 
-article i {
-    font-size: 20px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="button"] {
+    width: 20px;
+    margin: 0 5px;
     cursor: pointer;
-    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: white;
 }
 
-article i:hover {
+input[type="button"]:hover {
     color: #8F7963;
 }
 
-.lbbgi {
-    background-image: url(../img/studybgi2.svg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 160px;
+.shopping button{
+    border: none;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #634F45;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.shopping button i{
+    margin-right: 7px;
+}
+
+.shopping button:hover{
+    background-color: #8F7963;
+}
+
+/* 商品圖片跑馬燈 */
+.marquee_dot {
+    display: flex;
+    gap: 15px;
     position: absolute;
-    right: 5%;
     bottom: 7%;
-    z-index: -1;
+    left: 27%;
+}
+.marquee_dot a {
+    background-color: #B1B1B1;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.marquee_dot a:hover {
+    background-color: #634F45;
+}
+
+/* 下方商品介紹段落文字 */
+
+.descrip {
+    max-width: 980px;
+    margin: 40px auto 64px auto;
+}
+
+.descrip p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3;
 }
 
 /* 回到頁首符號 */

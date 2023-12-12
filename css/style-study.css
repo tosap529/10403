@@ -34,7 +34,6 @@ img {
     display: block;
 }
 
-
 /* 上方固定列 */
 
 header {
@@ -142,130 +141,145 @@ ol li a:hover {
 
 .top h2 {
     margin-left: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
 
 /* -------------Main------------ */
-main {
-    margin: 0 auto;
-    height: 920px;
-    background-image: url(../img/bat_profile_bgi.png);
-    background-position: center;
-    background-size: contain;
+
+main .bgi1 {
+    background-image: url(../img/studybgi1.svg);
     background-repeat: no-repeat;
-    margin-bottom: 60px;
+    width: 200px;
+    height: 90px;
+    position: absolute;
+    top: 125px;
+    left: 3.5%;
+    z-index: -1;
 }
 
-main ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin-top: 56px;
-}
-
-main ul li {
-    flex-basis: 250px;
-    height: 220px;
-    margin: 0 50px 100px 50px;
-}
-
-main img {
-    width: 150px;
+main .bgi2 {
+    background-image: url(../img/studybgi2.svg);
+    background-repeat: no-repeat;
+    width: 210px;
     height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 28px auto;
+    position: absolute;
+    bottom: 300px;
+    right: 10%;
+    z-index: -1;
 }
 
-main ul li a {
-    color: #634F45;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.pop_up{
+/* 下拉選單 */
+.custom-select {
+    border: none;
+    position: absolute;
+    right: 10%;
+    top: 135px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #F0F0F0;
+    font-size: 14px;
+    width: 60px;
     cursor: pointer;
+    outline: none;
 }
 
-/* 燈箱 */
-button {
-    cursor: pointer;
+.custom-select:hover {
+    background-color: #E6E2DB;
 }
 
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: hsla(0, 0%, 0%, .5);
-}
-
-.none {
-    display: none;
-}
-
-article {
+.custom-select option:checked {
     background-color: white;
-    width: 90%;
-    max-width: 600px;
+}
+
+/* 表格 */
+table {
+    width: 80%;
+    margin: 72px auto 40px auto;
+    background-color: rgba(255, 255, 255, .5);
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgb(84, 84, 84);
+}
+
+th {
     padding: 10px;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    padding: 40px;
-}
-
-article img {
-    width: 280px;
-    height: 280px;
-    border-radius: 10px;
-    margin: auto 0;
-}
-
-.article_text {
-    margin-left: 50px;
-}
-
-.article_text h2{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background-color: #E6E2DB;
     color: #634F45;
 }
 
-.article_text p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 24px;
-    width: 260px;
-    line-height: 1.4;
-}
-
-article i {
-    font-size: 20px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
+tbody tr{
+    text-align: center;
     cursor: pointer;
-    padding: 15px;
 }
 
-article i:hover {
+tr:hover {
     color: #8F7963;
 }
 
-.lbbgi {
-    background-image: url(../img/studybgi2.svg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 160px;
-    position: absolute;
-    right: 5%;
-    bottom: 7%;
-    z-index: -1;
+td {
+    padding: 12px 0;
+    border-bottom: 1px solid #D2D2D2;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+table th:first-child {
+    width: 40px;
+}
+
+table th:last-child {
+    width: 90px;
+}
+
+table td:nth-child(2) {
+    text-align: left;
+}
+
+table thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+table thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+/* 頁數 */
+
+.bottom {
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.bottom>h4 {
+    margin-left: 10%;
+}
+
+.page {
+    display: flex;
+    margin-left: 20%;
+}
+
+.page a {
+    padding: 0 10px;
+    color: #B1B1B1;
+}
+
+.page a:first-child,
+.page a:nth-child(2),
+.page a:last-child {
+    color: black;
+}
+
+.page a:hover {
+    color: #8F7963;
 }
 
 /* 回到頁首符號 */

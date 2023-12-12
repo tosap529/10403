@@ -383,6 +383,8 @@ ol li a:hover{
 .activity_main h3{
     margin-top: 8px;
     color: #634F45;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .activity_main p{
@@ -474,6 +476,8 @@ ol li a:hover{
 
   .banner h2{
     margin-top: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
   
   .ban:hover .overlay {
