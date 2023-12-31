@@ -27,6 +27,7 @@ h4 {
 
 p {
     font-size: 14px;
+    line-height: 1.6;
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
@@ -34,8 +35,10 @@ img {
     display: block;
 }
 
-
 /* 上方固定列 */
+header>.fa {
+    display: none;
+}
 
 header {
     width: 100%;
@@ -147,9 +150,24 @@ ol li a:hover {
 }
 
 /* -------------Main------------ */
+.hidden-content{
+    display: none;
+    
+}
+.moved{
+    margin-bottom: 110px;
+    transition: .5s;
+}
+
+.hidden-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: justify;
+    max-width: 340px;
+}
+
 main {
     margin: 0 auto;
-    height: 920px;
     background-image: url(../img/bat_profile_bgi.png);
     background-position: center;
     background-size: contain;
@@ -160,15 +178,17 @@ main {
 main ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    max-width: 1100px;
+    margin: 64px auto 0 auto;
     text-align: center;
-    margin-top: 56px;
 }
 
 main ul li {
     flex-basis: 250px;
     height: 220px;
     margin: 0 50px 100px 50px;
+    cursor: pointer;
+    flex-grow: 1;
 }
 
 main img {
@@ -179,14 +199,14 @@ main img {
     margin: 0 auto 28px auto;
 }
 
-main ul li a {
+main ul li h4{
     color: #634F45;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-.pop_up{
-    cursor: pointer;
+main ul li:hover h4{
+    color: #8F7963;
 }
 
 /* 燈箱 */
@@ -241,7 +261,7 @@ article img {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 24px;
     width: 260px;
-    line-height: 1.4;
+    text-align: justify;
 }
 
 article i {
@@ -343,4 +363,420 @@ footer p {
     font-size: 12px;
     text-align: center;
     padding-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* -----------------------RWD----------------------- */
+
+@media screen and (max-width: 1150px) {
+    header li a {
+        padding: 10px 24px;
+    }
+    .top{
+        max-width: 1000px;
+    }
+
+    /* main */
+    main ul{
+        max-width: 1000px;
+    }
+    main ul li{
+        margin: 0 40px 100px 40px;
+        height: 210px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    header li a {
+        padding: 10px 20px;
+    }
+    .top{
+        max-width: 850px;
+    }
+
+    /* main */
+    main{
+        background-image: none;
+        margin-bottom: 0;
+    }
+    main ul{
+        max-width: 850px;
+    }
+    main ul li{
+        margin: 0 auto 100px auto;
+    }
+    /* footer */
+    .footer_text {
+        margin: 20px 100px 0 100px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    header li a {
+        padding: 5px 16px;
+    }
+    .top{
+        max-width: 700px;
+    }
+
+    /* main */
+    main ul{
+        max-width: 700px;
+    }
+    main ul li:last-child{
+        flex-grow: 0;
+        margin: 0 0 80px 50px;
+    }
+    /* footer */
+    .footer{
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    .footer_text {
+        margin: 20px 60px 0 60px;
+    }
+}
+
+@media screen and (max-width: 845px) {
+
+    /* -----漢堡選單----- */
+    header .fa-bars {
+        display: inline;
+        line-height: 60px;
+        padding: 20px;
+        color: #634F45;
+    }
+
+    header .fa-xmark {
+        display: none;
+        line-height: 60px;
+        padding: 20px;
+        color: #634F45;
+    }
+
+    header {
+        display: block;
+        height: 60px;
+    }
+
+    header i+i+ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: calc(100vh - 60px);
+        background-color: #f0f0f0f6;
+        position: fixed;
+        top: 60px;
+        left: -80vw;
+        padding-left: 0;
+        width: 80vw;
+        z-index: 20;
+        transition: .5s;
+    }
+
+    header li {
+        line-height: 50px;
+        width: calc(100% - 21px);
+        padding-left: 20px;
+    }
+
+    header li:nth-child(7){
+        border-bottom: 1px solid rgba(255, 255, 255, .8);
+        padding-bottom: 5px;
+    }
+
+    header li a {
+        text-align: start;
+        padding: 0;
+        display: block;
+    }
+    header .top_logo {
+        position: fixed;
+        top: 0px;
+        left: 46%;
+        width: 60px;
+        padding: 0;
+    }
+    header img {
+        width: 60px;
+    }
+
+    /* 會員&購物車圖示 */
+    header .member {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }   
+
+    header .member li{
+        padding-left: 20px;
+    }
+
+    header .member li a {
+        font-size: 18px;
+        text-align: start;
+        padding: 0;
+    }
+
+    header .member li a::after{
+        content: attr(title);
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    /* 子選單 */
+    header .profile_ol {
+        top: 100px;
+    }
+
+    header .help_ol {
+        top: 150px;
+    }
+
+    header ol {
+        width: calc(100% - 75px);
+    }
+
+    header ol li{
+        width: 100%;
+    }
+
+    header ol li a {
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 0 10px;
+        margin: 0 6px;
+        line-height: 40px;
+        text-align: start;
+        border-bottom: none;
+        color: #8F7963;
+    }
+    ul>li>a:hover {
+        color: #634F45;
+    }
+
+    .last_a {
+        border-radius: 0;
+    }
+
+    header #profile a::after{
+        content: attr(data-i);
+        padding-left: 8px;
+    }
+
+    header #help a::after{
+        content: attr(data-i);
+        padding-left: 8px;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+ 
+    .top{
+        max-width: 550px;
+    }
+
+    /* main */
+    main{
+        background-image: none;
+    }
+    main ul{
+        max-width: 550px;
+    }
+    main ul li{
+        height: 200px;
+    }
+    main ul li:last-child{
+        margin: 0 0 80px 10px;
+    }
+
+    /* 燈箱 */
+    article{
+        max-width: 440px;
+    }
+    article img {
+        width: 200px;
+        height: 200px;
+    }
+    .article_text {
+        margin-left: 30px;
+    }
+    .article_text p {
+        width: 200px;
+    }
+
+    /* footer */
+    .footer img {
+        width: 125px;
+    }
+
+    .footer i {
+        font-size: 40px;
+    }
+
+    .footer_text {
+        margin: 20px 60px 0 40px;
+    }
+
+    .footer h3 {
+        margin-bottom: 18px;
+    }
+
+    .footer h4 {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+    .footer a{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header .top_logo {
+        left: 45%;
+    }
+    .top{
+        max-width: 430px;
+    }
+
+    /* main */
+    main ul{
+        max-width: 430px;
+    }
+    main ul li{
+        flex-basis: 200px;
+        height: 190px;
+        margin-bottom: 80px;
+    }
+    main ul li:last-child{
+        margin: 0 0 80px 8px;
+    }
+
+    /* 燈箱 */
+    article{
+        max-width: 350px;
+        padding: 30px;
+    }
+    article img {
+        width: 180px;
+        height: 180px;
+    }
+    .article_text {
+        margin-left: 20px;
+    }
+    .article_text p {
+        width: 160px;
+    }
+    .lbbgi {
+        display: none;
+    }
+
+    /* footer */
+    .footer{
+        padding-top: 30px;
+    }
+    .footer img {
+        width: 90px;
+        height: 90px;
+        margin-top: 15px;
+    }
+
+    .footer i {
+        font-size: 30px;
+    }
+
+    .footer_text {
+        margin: 20px 40px 0 30px;
+    }
+
+    .footer h3 {
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+
+    .footer h4 {
+        line-height: 1.6;
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .footer a{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header .top_logo {
+        left: 44%;
+    }
+    .top{
+        max-width: 365px;
+    }
+
+    /* main */
+    main ul{
+        max-width: 365px;
+    }
+    main ul li{
+        margin: 0 0 70px 0;
+        height: 180px;
+    }
+    main ul li:last-child{
+        margin: 0 auto 80px auto;
+        flex-grow: 1;
+    }
+
+    /* 燈箱 */
+    #lightbox{
+        display: none;
+    }
+    /* footer */
+    .footer{
+        padding-top: 20px;
+    }
+    .footer img {
+        width: 60px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .footer_text {
+        margin: 10px 20px 0 10px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    header .top_logo {
+        left: 43%;
+    }
+    .top{
+        max-width: 340px;
+    }
+
+    /* main */
+    main ul{
+        max-width: 340px;
+        margin-top: 44px;
+    }
+    /* footer */
+    .footer{
+        padding-top: 20px;
+    }
+    .footer img {
+        width: 60px;
+        height: 60px;
+        margin-top: 25px;
+    }
+
 }

@@ -146,7 +146,7 @@ ol li a:hover{
 main{
     display: flex;
     max-width: 1440px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
 }
 
 /* 側邊欄位 */
@@ -174,7 +174,7 @@ aside h4:hover{
 main ul{
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
     margin-top: 50px;
     margin-left: 50px;
 }
@@ -220,7 +220,8 @@ main ul li:hover p{
 
 .page{
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-right: 50%;
 }
 
 .page a{

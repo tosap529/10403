@@ -1,23 +1,61 @@
-//燈箱
-let lightbox_el = document.getElementById("lightbox");
+// 輪播
+const swiper = new Swiper('.swiper', {
+  
+  direction: 'horizontal',
+  loop: true,
 
-let pop_up = document.getElementsByClassName("pop_up")[0];
-pop_up.addEventListener("click", function () {
-  lightbox_el.classList.remove("none");
+  // 分頁圓點
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  autoplay: {
+    delay: 5000,
+  },
+
 });
 
-let pop_up_close = document.getElementsByClassName("fa-solid fa-xmark 2")[0];
-pop_up_close.addEventListener("click", function () {
-  lightbox_el.classList.add("none");
+swiper.el.onmouseover = function () {
+  swiper.autoplay.stop();
+}
+
+swiper.el.onmouseleave = function () {
+  swiper.autoplay.start();
+}
+
+var swiper2 = new Swiper('.swiper-container', {
+  slidesPerView: 2.6,
+  spaceBetween: 40,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
+// 輪播監聽視窗寬度變化
+window.addEventListener('resize', function() {
+  var windowWidth = window.innerWidth;
 
-lightbox_el.addEventListener("click", function () {
-  this.classList.add("none");
-});
+//RWD<=1000
+if (windowWidth <= 1000) {
+  swiper2.params.spaceBetween = 30;
+  swiper2.update(); 
+}
+//RWD<=900
+if (windowWidth <= 900) {
+  swiper2.params.spaceBetween = 17;
+  swiper2.update(); 
+}
 
-lightbox_el.querySelector("article").addEventListener("click", function (e) {
-  e.stopPropagation();
+//RWD<=580
+  if (windowWidth <= 580) {
+    swiper2.params.slidesPerView = 2; 
+    swiper2.update(); 
+  } else {
+    swiper2.params.slidesPerView = 2.6;
+    swiper2.update(); 
+  }
 });
 
 // 回到頁首
@@ -28,6 +66,7 @@ function scrollToTop() {
   });
 
 }
+
 
 // 漢堡主選單
 $(function () {
@@ -118,12 +157,3 @@ $(function () {
 });
 
 
-$(function () {
-  $('.pop_up').click(function () {
-
-    if ($(window).width() <= 450) {
-      $('.hidden-content').slideToggle(500);
-      $('.pop_up').toggleClass('moved');
-    }
-  });
-});

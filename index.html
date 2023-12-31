@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣蝙蝠學會</title>
+    <link rel="icon" href="./img/logosmall.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@500&display=swap"
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <link rel="stylesheet" href="./css/style-index.css">
-    
+
 </head>
+
 <body>
     <!-- 上方固定列 -->
     <header>
 
+        <i class="fa fa-bars" area-hidden="true"></i>
+        <i class="fa fa-solid fa-xmark" area-hidden="true"></i>
+
         <ul>
             <li><a href="#">關於學會</a></li>
-            <li><a href="#">認識蝙蝠</a>
-                <ol>
+            <li id="profile"><a href="#" data-i="▾">認識蝙蝠</a>
+                <ol class="profile_ol">
                     <li><a href="./batprofile.html">蝙蝠小檔案</a></li>
                     <li><a href="./species.html">蝙蝠的種類</a></li>
                     <li><a href="./study.html" class="last_a">蝙蝠的研究</a></li>
                 </ol>
             </li>
-            <li><a href="#">蝙蝠救傷</a>
-                <ol>
+            <li id="help"><a href="#" data-i="▾">蝙蝠救傷</a>
+                <ol class="help_ol">
                     <li><a href="#">撿到蝙蝠</a></li>
                     <li><a href="#" class="last_a">蝙蝠飛進家裡</a></li>
                 </ol>
             </li>
-        <li><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
+            <li class="top_logo"><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
             <li><a href="./product.html">蝙蝠小物</a></li>
             <li><a href="#">合作單位</a></li>
             <li><a href="#">聯絡我們</a></li>
-        </ul>
 
-        <ul class="member">
-            <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <ul class="member">
+                <li><a href="./login.html" title="會員"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#" title="購物車"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
         </ul>
 
     </header>
 
     <main>
-    <!-- 首圖動畫 -->
+        <!-- 首圖動畫 -->
         <section class="kv">
             <img class="imgL" src="img/bat_ani_left.png" alt="">
             <div class="kv_text">
@@ -55,40 +67,85 @@
             <img class="imgR" src="img/bat_ani_right.png" alt="">
         </section>
 
-    <!-- 最新消息 -->
+        <!-- 最新消息 -->
         <section class="news">
-        
-        <div class="news_top_text">
-            <img src="img/Icon/bat-brown.svg" alt="">
-            <h2>最新消息</h2>
-            <p><a href="#">所有最新消息</a></p>
-        </div>
 
-        <div class="news_main">
-            <a href="#">
-            <div class="news_img"></div>
-            </a>
-            <div class="news_text">
-                <h3>2023 玉兔迎春 福兔迎祥</h3>
-                <p>祝福各位蝠友 揚眉兔氣 鴻兔大展！<br>
-                渦渦渦～ 大家新年快樂！轉瞬間跑了365個日夜老虎大爺就這麼的溜走了，緊接著上場接棒的最可愛的小兔兔！
-                大家可要知道，在臺灣也有以兔兔為名的蝠蝠呢許多研究人員心目中覺得超可愛的“兔耳蝠”，可是專屬於臺灣的特有種類喔，正式的名稱是臺灣長耳蝠，中高海拔的森林是牠們的家，跟身體一樣長的大耳朵是招牌特徵！最有趣的是平常休息的時候會把長耳朵放下來背在背上，飛行的時候才把長耳朵立起來聽聲辨位。
-                不知道大家對於蝙蝠有什麼印象呢？              
-                </p>
-                <a href="#">...更多</a>
+            <div class="news_top_text">
+                <img src="img/Icon/bat-brown.svg" alt="">
+                <h2>最新消息</h2>
+                <p><a href="#">所有最新消息</a></p>
             </div>
-        </div>
 
-        <div class="marquee_dot">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
+            <div class="news_content">
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide news_main">
+
+                            <a href="#">
+                                <img src="./img/top_img.jpg" alt="">
+                            </a>
+
+                            <div class="news_text">
+                                <h3>2023 玉兔迎春 福兔迎祥</h3>
+                                <p>祝福各位蝠友 揚眉兔氣 鴻兔大展！<br>
+                                    渦渦渦～ 大家新年快樂！轉瞬間跑了365個日夜老虎大爺就這麼的溜走了，緊接著上場接棒的最可愛的小兔兔！
+                                    大家可要知道，在臺灣也有以兔兔為名的蝠蝠呢許多研究人員心目中覺得超可愛的“兔耳蝠”，可是專屬於臺灣的特有種類喔，正式的名稱是臺灣長耳蝠，中高海拔的森林是牠們的家，跟身體一樣長的大耳朵是招牌特徵！最有趣的是平常休息的時候會把長耳朵放下來背在背上，飛行的時候才把長耳朵立起來聽聲辨位。
+                                    不知道大家對於蝙蝠有什麼印象呢？
+                                </p>
+                                <a href="#">...更多</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide news_main">
+
+                            <a href="#">
+                                <img src="./img/top_img2.jpg" alt="">
+                            </a>
+
+                            <div class="news_text">
+                                <h3>中華文化中的蝙蝠</h3>
+                                <p>文字上「蝠」與「福」同音，加上祖先們也觀察到蝙蝠都是倒掛著，所以有著「福到」、「福天降」的意義象徵。<br>
+                                    也因此蝙蝠意象的裝飾，非常非常頻繁地出現在華人社會中。
+                                    想要尋福的蝠友們！今年返鄉的時候，在老家中尋尋寶，有機會在老文具、老傢俱或房屋的裝飾中找到福氣喔！
+                                    沒有發現也沒關係(小編家也沒有 嗚嗚嗚～)，過年走春到廟裡逛逛或參拜的時候，可以跟同行友人比賽看看誰發現的福氣最多！
+                                </p>
+                                <a href="#">...更多</a>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide news_main">
+
+                            <a href="#">
+                                <img src="./img/top_img3.jpg" alt="">
+                            </a>
+
+                            <div class="news_text">
+                                <h3>介紹臺灣小蹄鼻蝠</h3>
+                                <p>最近大家過得好嗎？全台冷颼颼，連蝙蝠也只想待在家裡不出門呢~<br>
+                                    今天要來介紹 臺灣小蹄鼻蝠 Rhinolophus monoceros<br>
+                                    如同臺灣大蹄鼻蝠，他們鼻葉特化成有如馬蹄狀樣子，體型嬌小的臺灣小蹄鼻蝠(5g)，配上複雜的鼻葉，整個小臉有如皺縮一起，說不出的怪異可愛(！？)<br>
+                                    不同於社會邊緣蝠的臺灣大蹄鼻蝠，臺灣小蹄鼻蝠喜歡成群結隊的擠在一起，越擠越好的那種(？)，偏好住在洞穴或是像洞穴的地方，如廢棄隧道、防空洞、排水溝、橋梁箱涵等等，偶爾能在廢棄建築物裡發現幾隻落單個體。
+                                </p>
+                                <a href="#">...更多</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
 
         </section>
 
-    <!-- 活動資訊 -->
+        <!-- 活動資訊 -->
         <section class="activity">
 
             <div class="activity_top_text">
@@ -99,75 +156,117 @@
 
             <div class="activity_main">
 
-                <ul>
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <li>
-                        <div class="activity_img1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <!-- 第1 -->
+                        <div class="swiper-slide">
+
+                            <div class="activity_main">
+                                <img src="./img/activity_img1.jpg" alt="">
+                                <div class="activity_text">
+                                    <h3>相挺者交流市集X守護者音樂故事分享會</h3>
+                                    <p>特生中心與林務局為了吸引不同類群的民衆，更加認識臺灣瀕危野生動物(包括：臺灣黑熊、石虎等)生存處境以及保育現況，共同舉辦了「守護臺灣瀕危野生動物推廣教育」系列活動。
+                                    </p>
+                                    <a href="#">...更多</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="activity_text">
-                            <h3>相挺者交流市集X守護者音樂故事分享會</h3>
-                            <p>特生中心與林務局為了吸引不同類群的民衆，更加認識臺灣瀕危野生動物(包括：臺灣黑熊、石虎等)生存處境以及保育現況，共同舉辦了「守護臺灣瀕危野生動物推廣教育」系列活動。          
-                            </p>
-                            <a href="#">...更多</a>
+
+                        <!-- 第2 -->
+                        <div class="swiper-slide">
+
+                            <div class="activity_main">
+                                <img src="./img/activity_img2.jpg" alt="">
+                                <div class="activity_text">
+                                    <h3>Hello~Wind Halloween 大煙囪萬聖節風城市集</h3>
+                                    <p>今年萬聖節各位蝠友安排行程了嗎？要不要到新竹一起過節呢？<br>
+                                        快來參加「小凱的蝙蝠車」繪本說故事吧！<br>
+                                        台灣蝙蝠學會的攤位也有趣味的遊戲等著你喔！
+                                    </p>
+                                    <a href="#">...更多</a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="activity_img2">
+
+                        <!-- 第3 -->
+                        <div class="swiper-slide">
+                            <img src="./img/activity_img3.jpg" alt="">
+                            <div class="activity_text">
+                                <h3>乘載永續的時光屋-蝙蝠屋特展</h3>
+                                <p>謹訂於2022年10月2日(星期日) 於黃金蝙蝠生態館舉行誠摯邀請您共襄盛舉。敬請蒞臨指導！黃金蝙蝠生態館敬上。現場座位有限，各位朋友請務必線上報名！
+                                </p>
+                                <a href="#">...更多</a>
+                            </div>
                         </div>
-                        <div class="activity_text">
-                            <h3>Hello~Wind Halloween 大煙囪萬聖節風城市集</h3>
-                            <p>今年萬聖節各位蝠友安排行程了嗎？要不要到新竹一起過節呢？<br>
-                            快來參加「小凱的蝙蝠車」繪本說故事吧！<br>
-                            台灣蝙蝠學會的攤位也有趣味的遊戲等著你喔！            
-                            </p>
-                            <a href="#">...更多</a>
+
+                        <!-- 第4 -->
+                        <div class="swiper-slide">
+                            <div class="activity_main">
+                                <img src="./img/activity_img4.jpg" alt="">
+                                <div class="activity_text">
+                                    <h3>111年動物嘉年華活動重磅登場</h3>
+                                    <p>幫家中寵物打扮，並報名拍照上傳★投票期間經過FB按讚👍或大心❤️投票後的前10名獲票最高之民眾，並於【9月24日(六)】參加我們的走秀活動，即可獲得一份價值1500元的福袋。
+                                    </p>
+                                    <a href="#">...更多</a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="activity_img3">
+
+                        <!-- 第5 -->
+                        <div class="swiper-slide">
+
+                            <div class="activity_main">
+                                <img src="./img/activity_img5.jpg" alt="">
+                                <div class="activity_text">
+                                    <h3>台灣蝙蝠學會2022會員大會</h3>
+                                    <p>好久不見！！大家最近過得好嗎？我們要舉辦會員大會啦啦啦~<br>
+                                        時間: 2022年5月21日 週六13:30-19:00<br>
+                                        地點: log 野筏、大煙囪下的家
+                                    </p>
+                                    <a href="#">...更多</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="activity_text">
-                            <h3>乘載永續的時光屋-蝙蝠屋特展</h3>
-                            <p>謹訂於2022年10月2日(星期日) 於黃金蝙蝠生態館舉行誠摯邀請您共襄盛舉。敬請蒞臨指導！黃金蝙蝠生態館敬上。現場座位有限，各位朋友請務必線上報名！
-                            </p>
-                            <a href="#">...更多</a>
-                        </div>
-                    </li>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </ul>
+
+                    </div>
+
+
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
 
             </div>
 
         </section>
 
-    <!-- Banner*2 -->
+        <!-- Banner*2 -->
         <section class="banner">
-              
+
             <div class="ban">
                 <a href="#">
-                  <div class="overlay">
-                    <h2>撿到蝙蝠怎麼辦？</h2>
-                  </div>
-                  <img src="img/banner1.png" alt="">
+                    <div class="overlay">
+                        <h2>撿到蝙蝠怎麼辦？</h2>
+                    </div>
+                    <img src="img/banner1.png" alt="">
                 </a>
             </div>
-             
+
             <div class="ban">
                 <a href="#">
-                  <div class="overlay">
-                    <h2>會員招募中！</h2>
-                  </div>
-                  <img src="img/banner2.png" alt="">
+                    <div class="overlay">
+                        <h2>會員招募中！</h2>
+                    </div>
+                    <img src="img/banner2.png" alt="">
                 </a>
             </div>
 
         </section>
 
     </main>
-    
-    <a href="#">
-    <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </a>
+
+    <i class="fa fa-angle-up" aria-hidden="true" onclick="scrollToTop()"></i>
 
     <!-- 頁尾 -->
     <footer>
@@ -175,19 +274,25 @@
         <div class="footer">
             <img src="img/logo.png" alt="">
             <div class="footer_text">
-            <h3>社團法人台灣蝙蝠學會</h3>
-            <h4>
-                通訊地址：嘉義縣中埔鄉中華路662-1號<br>
-                聯絡電話：0988-271110<br>
-                聯絡信箱：taiwanbat2015@gmail.com
-            </h4>
+                <h3>社團法人台灣蝙蝠學會</h3>
+                <h4>
+                    通訊地址：嘉義縣中埔鄉中華路662-1號<br>
+                    聯絡電話：0988-271110<br>
+                    聯絡信箱：taiwanbat2015@gmail.com
+                </h4>
             </div>
-            
+
             <a href="https://www.facebook.com/battw" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
 
-        <p>本網站為緯育TibaMe【第89期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+        <p>本網站為緯育TibaMe【第89期】前端工程師專業技術養成班學員作品,<br>僅供學習、展示之用途。</p>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./js/index.js"></script>
+
 </body>
+
 </html>

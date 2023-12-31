@@ -13,41 +13,45 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style-batprofile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 
 </head>
 
 <body>
-    <!-- 上方固定列 -->
-    <header>
+     <!-- 上方固定列 -->
+     <header>
+
+        <i class="fa fa-bars" area-hidden="true"></i>
+        <i class="fa fa-solid fa-xmark" area-hidden="true"></i>
 
         <ul>
             <li><a href="#">關於學會</a></li>
-            <li><a href="#">認識蝙蝠</a>
-                <ol>
+            <li id="profile"><a href="#" data-i="▾">認識蝙蝠</a>
+                <ol class="profile_ol">
                     <li><a href="./batprofile.html">蝙蝠小檔案</a></li>
                     <li><a href="./species.html">蝙蝠的種類</a></li>
-                    <li><a href="./species.html" class="last_a">蝙蝠的研究</a></li>
+                    <li><a href="./study.html" class="last_a">蝙蝠的研究</a></li>
                 </ol>
             </li>
-            <li><a href="#">蝙蝠救傷</a>
-                <ol>
+            <li id="help"><a href="#" data-i="▾">蝙蝠救傷</a>
+                <ol class="help_ol">
                     <li><a href="#">撿到蝙蝠</a></li>
                     <li><a href="#" class="last_a">蝙蝠飛進家裡</a></li>
                 </ol>
             </li>
-        <li><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
+            <li class="top_logo"><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
             <li><a href="./product.html">蝙蝠小物</a></li>
             <li><a href="#">合作單位</a></li>
             <li><a href="#">聯絡我們</a></li>
-        </ul>
 
-        <ul class="member">
-            <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <ul class="member">
+                <li><a href="./login.html" title="會員"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#" title="購物車"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
         </ul>
 
     </header>
-    
+
     <div class="top">
         <img src="img/Icon/bat.svg" alt="">
         <h2>蝙蝠小檔案</h2>
@@ -56,68 +60,52 @@
     <main>
         <ul>
             <li class="pop_up">
-            <a>
-            <img src="img/bat_profile1.jpg" alt="">
-                    蝙蝠是什麼？
-            </a>
+                <img src="img/bat_profile1.jpg" alt="">
+                <h4>蝙蝠是什麼？</h4>
+                <div class="hidden-content">
+                    <p>既不是會飛的老鼠，也不是會下蛋的鳥類。蝙蝠是哺乳類動物，是翼手目動物的總稱。是全世界唯一真正會飛行的哺乳類動物喔！</p>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile2.jpg" alt="">
-                    蝙蝠都是黑色的？
-            </a>
+                <h4>蝙蝠都是黑色的？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile3.jpg" alt="">
-                    蝙蝠吃什麼？
-            </a>
+                <h4>蝙蝠吃什麼？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile4.jpg" alt="">
-                    蝙蝠住哪裡？
-            </a>
+                <h4>蝙蝠住哪裡？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile5.jpg" alt="">
-                    台灣有吸血蝙蝠嗎？
-            </a>
+                <h4>台灣有吸血蝙蝠嗎？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile6.jpg" alt="">
-                    蝙蝠飛多快？
-            </a>
+                <h4>蝙蝠飛多快？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile7.jpg" alt="">
-                    蝙蝠的超音波
-            </a>
+                <h4>蝙蝠的超音波</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile8.jpg" alt="">
-                    為何蝙蝠總是倒吊？
-            </a>
+                <h4>為何蝙蝠總是倒吊？</h4>
             </li>
 
             <li>
-            <a href="#">
                 <img src="img/bat_profile9.jpg" alt="">
-                    蝙蝠與人類的關係
-            </a>
+                <h4>蝙蝠與人類的關係</h4>
             </li>
-            
+
         </ul>
 
         <!-- 燈箱 -->
@@ -126,20 +114,18 @@
                 <img src="./img/bat_profile1.jpg" alt="">
 
                 <div class="article_text">
-                <h2>蝙蝠是什麼？</h2>
-                <p>既不是會飛的老鼠，也不是會下蛋的鳥類。蝙蝠是哺乳類動物，是翼手目動物的總稱。是全世界唯一真正會飛行的哺乳類動物喔！</p>
+                    <h2>蝙蝠是什麼？</h2>
+                    <p>既不是會飛的老鼠，也不是會下蛋的鳥類。蝙蝠是哺乳類動物，是翼手目動物的總稱。是全世界唯一真正會飛行的哺乳類動物喔！</p>
                 </div>
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark 2"></i>
 
                 <div class="lbbgi"></div>
             </article>
-          </div>
+        </div>
 
     </main>
 
-    <a href="#">
-        <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </a>
+    <i class="fa fa-angle-up" aria-hidden="true" onclick="scrollToTop()"></i>
 
     <!-- 頁尾 -->
     <footer>
@@ -158,7 +144,7 @@
             <a href="https://www.facebook.com/battw" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
 
-        <p>本網站為緯育TibaMe【第89期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+        <p>本網站為緯育TibaMe【第89期】前端工程師專業技術養成班學員作品,<br>僅供學習、展示之用途。</p>
 
     </footer>
 

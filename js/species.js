@@ -3,8 +3,9 @@
 let lightbox_el = document.getElementById('lightbox');
 
 let pop_up = document.getElementsByClassName('pop_up')[0];
-pop_up.addEventListener('click', function(){
+pop_up.addEventListener('click', function(e){
   lightbox_el.classList.remove('none');
+  e.preventDefault();
 });
 
 let pop_up_close = document.getElementsByClassName('fa-solid fa-xmark')[0];
@@ -31,3 +32,11 @@ linkToMiddle.addEventListener('click', function(e) {
   let middleElement = document.getElementById('middle');
   middleElement.scrollIntoView({ behavior: 'smooth' }); // 平滑滾動到指定元素
 });
+
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+  
+}
