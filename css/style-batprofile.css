@@ -156,7 +156,6 @@ ol li a:hover {
 }
 .moved{
     margin-bottom: 110px;
-    transition: .5s;
 }
 
 .hidden-content p{
@@ -233,7 +232,6 @@ article {
     max-width: 600px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgb(84, 84, 84);
-    padding: 10px;
     position: absolute;
     top: 55%;
     left: 50%;
@@ -537,6 +535,7 @@ footer p {
 
     header ol {
         width: calc(100% - 75px);
+        position: static;
     }
 
     header ol li{
@@ -740,6 +739,9 @@ footer p {
     /* 燈箱 */
     #lightbox{
         display: none;
+    }
+    .pop_up{
+        transition: .5s;
     }
     /* footer */
     .footer{

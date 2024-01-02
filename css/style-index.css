@@ -906,14 +906,17 @@ footer p {
     /* 子選單 */
     header .profile_ol {
         top: 100px;
+        display: none;
     }
 
     header .help_ol {
         top: 150px;
+        display: none;
     }
 
     header ol {
         width: calc(100% - 75px);
+        position: static;
     }
 
     header ol li{

@@ -1,3 +1,4 @@
+// 商品照片輪播
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -13,14 +14,7 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-
-}
-
+// 購物車 + - 數量
 document.addEventListener('DOMContentLoaded', function () {
     const minusBtn = document.querySelector('.minus');
     const plusBtn = document.querySelector('.plus');

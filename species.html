@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣蝙蝠學會-蝙蝠的種類</title>
+    <link rel="icon" href="./img/logosmall.png">
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@500&display=swap"
         rel="stylesheet">
+    <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="./css/style-species.css">
 
 </head>
@@ -20,32 +28,35 @@
     <!-- 上方固定列 -->
     <header>
 
+        <i class="fa fa-bars" area-hidden="true"></i>
+        <i class="fa fa-solid fa-xmark" area-hidden="true"></i>
+  
         <ul>
             <li><a href="#">關於學會</a></li>
-            <li><a href="#">認識蝙蝠</a>
-                <ol>
+            <li id="profile"><a data-i="▾">認識蝙蝠</a>
+                <ol class="profile_ol">
                     <li><a href="./batprofile.html">蝙蝠小檔案</a></li>
                     <li><a href="./species.html">蝙蝠的種類</a></li>
                     <li><a href="./study.html" class="last_a">蝙蝠的研究</a></li>
                 </ol>
             </li>
-            <li><a href="#">蝙蝠救傷</a>
-                <ol>
+            <li id="help"><a data-i="▾">蝙蝠救傷</a>
+                <ol class="help_ol">
                     <li><a href="#">撿到蝙蝠</a></li>
                     <li><a href="#" class="last_a">蝙蝠飛進家裡</a></li>
                 </ol>
             </li>
-            <li><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
+            <li class="top_logo"><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
             <li><a href="./product.html">蝙蝠小物</a></li>
             <li><a href="#">合作單位</a></li>
             <li><a href="#">聯絡我們</a></li>
+  
+            <ul class="member">
+                <li><a href="./login.html" title="會員"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#" title="購物車"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
         </ul>
-
-        <ul class="member">
-            <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-
+  
     </header>
 
     <div class="top">
@@ -62,7 +73,7 @@
         </div>
 
         <div class="map-container">
-
+            <div class="map_list"></div>
             <svg id="map" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
                 <g>
 
@@ -113,14 +124,14 @@
 
         <div id="middle">
 
-
-            <h2>台灣的蝙蝠</h2>
-            <p>臺灣的翼手目動物(Chiroptera)共6科38種，又分為陰蝠亞目(Yinpterochiroptera)及陽蝠亞目(Yangochiroptera)。</p>
-
+            <div class="middle_out">
+                <h2>台灣的蝙蝠</h2>
+                <p>臺灣的翼手目動物(Chiroptera)共6科38種，又分為陰蝠亞目(Yinpterochiroptera)及陽蝠亞目(Yangochiroptera)。</p>
+            </div>
 
             <div class="middle_in">
 
-                <div class="yin">
+                <div class="yin" data-aos="fade-up" data-aos-duration="1000">
                     <h2>陰蝠亞目(Yinpterochiroptera)</h2>
                     <p>3科7種，狐蝠科(Pteropodidae) 3種、蹄鼻蝠科(Rhinolophidae) 2種、葉鼻蝠科(Hipposideridae) 2種。</p>
                     <ul>
@@ -147,7 +158,7 @@
                     </ul>
                 </div>
 
-                <div class="yan">
+                <div class="yan" data-aos="fade-up" data-aos-duration="1500">
                     <h2>陽蝠亞目(Yangochiroptera)</h2>
                     <p>3科31種，摺翅蝠科(Miniopteridae) 1種、游離尾蝠科(Molossidae) 1種、蝙蝠科(Vespertilionidae) 29種。</p>
                     <ul>
@@ -180,48 +191,48 @@
 
         <div class="bottom">
 
-            <h2>台灣蝙蝠名錄</h2>
+            <div class="tablerwd">
+                <h2>台灣蝙蝠名錄</h2>
+                <table>
+                    <thead>
+                        <th class="first_th">
+                            <h4>大蝙蝠科</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </th>
+                        <th>特有種</th>
+                        <th>特有亞種</th>
+                        <th>離島與外島</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>大蝙蝠科 Pteropodidae</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>臺灣狐蝠<span>Pteropus dasymallus formosus</span></td>
+                            <td></td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>印度犬果蝠<span>Cynopterus sphinx</span></td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>棕果蝠<span>Rousettus leschenaultii</span></td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                        </tr>
 
-            <table>
-                <thead>
-                  <th class="first_th">
-                    <h4>大蝙蝠科</h4>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </th>
-                  <th>特有種</th>
-                  <th>特有亞種</th>
-                  <th>離島與外島</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>大蝙蝠科 Pteropodidae</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                  <tr>
-                    <td>臺灣狐蝠<span>Pteropus dasymallus formosus</span></td>
-                    <td></td>
-                    <td><i class="fa-solid fa-check"></i></td>
-                    <td><i class="fa-solid fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>印度犬果蝠<span>Cynopterus sphinx</span></td>
-                    <td></td>
-                    <td></td>
-                    <td><i class="fa-solid fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>棕果蝠<span>Rousettus leschenaultii</span></td>
-                    <td></td>
-                    <td></td>
-                    <td><i class="fa-solid fa-check"></i></td>
-                  </tr>
 
-                  
-                </tbody>
-              </table>
-
+                    </tbody>
+                </table>
+            </div>
             <div class="bbgi"></div>
 
         </div>
@@ -237,7 +248,8 @@
                     <p>英名：Honduran white bat<br>
                         分類：美洲葉鼻蝠科<br>
                         分布：宏都拉斯至巴拿馬西部<br>
-                        <br>
+                    </p>
+                    <p>
                         宏都拉斯白蝠主要以水果為食，會利用一種大型赫蕉屬植物築巢，以躲避天敵或雨水。大部分為一雄多雌群聚棲息。
                     </p>
                 </div>
@@ -272,7 +284,12 @@
 
     </footer>
 
+    <!-- js -->
     <script src="./js/species.js"></script>
+    <script src="./js/all.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

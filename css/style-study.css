@@ -514,6 +514,7 @@ footer p {
 
     header ol {
         width: calc(100% - 75px);
+        position: static;
     }
 
     header ol li {
@@ -679,9 +680,6 @@ footer p {
     .top {
         max-width: 340px;
     }
-
-    /* main */
-
 
     /* footer */
     .footer {
