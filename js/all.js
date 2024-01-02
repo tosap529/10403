@@ -48,40 +48,20 @@ $(function () {
     }
   }
 
-  $('#profile').click(function () {
+  $('.main-li-has-menu').click(function () {
     if (click_mobile === true) {
-      // console.log('click profile');
-      
+      console.log('click profile');
+
       if ($(this).hasClass('moved1')) {
         $(this).removeClass('moved1');
-        $('.profile_ol').css('display', 'none');
-        $('#profile a').attr('data-i', '▾');
+
       } else {
+        // $('.main-li-has-menu').removeClass('moved1')
         $(this).addClass('moved1');
-        $('.profile_ol').css('display', 'block');
-        $('#profile a').removeAttr('data-i');
+
       }
 
     }
-
-  });
-
-  $('#help').click(function () {
-    if (click_mobile === true) {
-      // console.log('click help');
-
-      if ($(this).hasClass('moved2')) {
-        $(this).removeClass('moved2');
-        $('.help_ol').css('display', 'none');
-        $('#help a').attr('data-i', '▾');
-      } else {
-        $(this).addClass('moved2');
-        $('.help_ol').css('display', 'block')
-        $('#help a').removeAttr('data-i')
-      }
-
-    }
-
 
   });
 

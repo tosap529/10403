@@ -20,27 +20,29 @@
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- css -->
+    <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/style-batprofile.css">
+    <link rel="stylesheet" href="./css/default-m.css">
 </head>
 
 <body>
-     <!-- 上方固定列 -->
-     <header>
+    <!-- 上方固定列 -->
+    <header>
 
         <i class="fa fa-bars" area-hidden="true"></i>
         <i class="fa fa-solid fa-xmark" area-hidden="true"></i>
 
         <ul>
             <li><a href="#">關於學會</a></li>
-            <li id="profile"><a data-i="▾">認識蝙蝠</a>
-                <ol class="profile_ol">
+            <li id="profile" class="main-li-has-menu"><a href="#" data-i="▾">認識蝙蝠</a>
+                <ol class="profile_ol  main-li-sub-menu">
                     <li><a href="./batprofile.html">蝙蝠小檔案</a></li>
                     <li><a href="./species.html">蝙蝠的種類</a></li>
                     <li><a href="./study.html" class="last_a">蝙蝠的研究</a></li>
                 </ol>
             </li>
-            <li id="help"><a data-i="▾">蝙蝠救傷</a>
-                <ol class="help_ol">
+            <li id="help" class="main-li-has-menu"><a href="#" data-i="▾">蝙蝠救傷</a>
+                <ol class="help_ol main-li-sub-menu">
                     <li><a href="#">撿到蝙蝠</a></li>
                     <li><a href="#" class="last_a">蝙蝠飛進家裡</a></li>
                 </ol>
@@ -156,9 +158,9 @@
     <!-- js -->
     <script src="./js/batprofile.js"></script>
     <script src="./js/all.js"></script>
-     <!-- AOS -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>AOS.init();</script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

@@ -22,37 +22,42 @@
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- css -->
+    <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/style-productinfo.css">
+    <link rel="stylesheet" href="./css/default-m.css">
 </head>
 
 <body>
     <!-- 上方固定列 -->
     <header>
 
+        <i class="fa fa-bars" area-hidden="true"></i>
+        <i class="fa fa-solid fa-xmark" area-hidden="true"></i>
+
         <ul>
             <li><a href="#">關於學會</a></li>
-            <li><a href="#">認識蝙蝠</a>
-                <ol>
+            <li id="profile" class="main-li-has-menu"><a href="#" data-i="▾">認識蝙蝠</a>
+                <ol class="profile_ol  main-li-sub-menu">
                     <li><a href="./batprofile.html">蝙蝠小檔案</a></li>
                     <li><a href="./species.html">蝙蝠的種類</a></li>
                     <li><a href="./study.html" class="last_a">蝙蝠的研究</a></li>
                 </ol>
             </li>
-            <li><a href="#">蝙蝠救傷</a>
-                <ol>
+            <li id="help" class="main-li-has-menu"><a href="#" data-i="▾">蝙蝠救傷</a>
+                <ol class="help_ol main-li-sub-menu">
                     <li><a href="#">撿到蝙蝠</a></li>
                     <li><a href="#" class="last_a">蝙蝠飛進家裡</a></li>
                 </ol>
             </li>
-            <li><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
+            <li class="top_logo"><a href="./index.html"><img src="img/logo.png" alt=""></a></li>
             <li><a href="./product.html">蝙蝠小物</a></li>
             <li><a href="#">合作單位</a></li>
             <li><a href="#">聯絡我們</a></li>
-        </ul>
 
-        <ul class="member">
-            <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <ul class="member">
+                <li><a href="./login.html" title="會員"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#" title="購物車"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
         </ul>
 
     </header>

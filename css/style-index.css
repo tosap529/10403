@@ -1,132 +1,3 @@
-@import url('reset.css');
-
-body {
-    background-color: white;
-    position: relative;
-}
-
-a {
-    text-decoration: none;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-}
-
-h2 {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 20px;
-}
-
-h3 {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 18px;
-}
-
-h4 {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 16px;
-}
-
-p {
-    font-size: 14px;
-    line-height: 1.6;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-}
-
-img {
-    display: block;
-}
-
-
-/* 上方固定列 */
-header>.fa {
-    display: none;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    box-sizing: border-box;
-    height: 80px;
-    background-image: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .7) 100%);
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
-header ul {
-    display: flex;
-    align-items: center;
-    padding-left: 70px;
-    height: 80px;
-}
-
-header li {
-    line-height: 80px;
-}
-
-header li a {
-    text-align: center;
-    color: #634F45;
-    font-size: 16px;
-    padding: 10px 30px;
-    position: relative;
-}
-
-header img {
-    width: 80px;
-}
-
-/* 子選單 */
-header ol {
-    position: absolute;
-    top: 80px;
-    display: none;
-}
-
-header ol li a {
-    display: block;
-    width: 90px;
-    height: 35px;
-    background-color: #E6E2DB;
-    font-size: 14px;
-    padding: 0 10px;
-    margin: 0 6px;
-    line-height: 35px;
-    text-align: center;
-    border-bottom: 1px solid white;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.last_a {
-    border-radius: 0 0 10px 10px;
-}
-
-/* 會員&購物車圖示 */
-header .member {
-    padding-left: 30px;
-}
-
-header .member li a {
-    padding: 10px;
-}
-
-/* hover效果 */
-
-ul>li>a:hover {
-    color: #8F7963;
-}
-
-ul>li:hover ol {
-    display: block;
-}
-
-ol li a:hover {
-    background-color: #F0F0F0;
-    color: #8F7963;
-}
 
 /* -------------Main------------ */
 
@@ -480,94 +351,9 @@ ol li a:hover {
     opacity: 1;
 }
 
-
-/* 回到頁首符號 */
-
-.fa-angle-up {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    font-size: 15px;
-    cursor: pointer;
-    z-index: 1;
-    position: fixed;
-    right: 20px;
-    top: 90%;
-    background-color: #D2D2D2;
-    color: white;
-}
-
-.fa-angle-up:hover {
-    background-color: #8F7963;
-}
-
-/* ------------footer------------- */
-
-footer {
-    width: 100%;
-    background-color: #B1B1B1;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    padding-top: 48px;
-    padding-bottom: 24px;
-}
-
-.footer img {
-    width: 150px;
-}
-
-.footer i {
-    font-size: 50px;
-    color: #634F45;
-}
-
-.footer i:hover {
-    color: #8F7963;
-}
-
-.footer a {
-    width: 50px;
-    height: 50px;
-    margin-top: 40px;
-}
-
-.footer_text {
-    margin: 20px 190px 0 150px;
-}
-
-.footer h3 {
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.footer h4 {
-    line-height: 1.6;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-footer p {
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    padding-bottom: 20px;
-    line-height: 1.5;
-}
-
-
 /* -----------------------RWD----------------------- */
 
 @media screen and (max-width: 1150px) {
-
-    header li a {
-        padding: 10px 24px;
-    }
-
     /* 首圖動畫 */
     .kv {
         max-width: 1000px;
@@ -618,12 +404,15 @@ footer p {
         width: 360px;
     }
 
-    .activity h3{
-        line-height: 1.4;   
+    .activity h3 {
+        line-height: 1.4;
     }
-    .swiper-button-next, .swiper-button-prev {
+
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 28%;
     }
+
     /* banner */
     .ban,
     .ban img {
@@ -640,11 +429,6 @@ footer p {
 }
 
 @media screen and (max-width: 1000px) {
-
-    header li a {
-        padding: 10px 20px;
-    }
-
     /* 首圖動畫 */
     .kv {
         max-width: 850px;
@@ -702,9 +486,11 @@ footer p {
         width: 310px;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 25%;
     }
+
     /* banner */
     .ban,
     .ban img {
@@ -714,19 +500,9 @@ footer p {
     .banner h2 {
         margin-top: 120px;
     }
-
-    /* footer */
-    .footer_text {
-        margin: 20px 100px 0 100px;
-    }
-    
 }
 
 @media screen and (max-width: 900px) {
-    header li a {
-        padding: 5px 16px;
-    }
-
     /* 首圖動畫 */
     .kv {
         max-width: 700px;
@@ -794,9 +570,12 @@ footer p {
     .activity_main p {
         width: 250px;
     }
-    .swiper-button-next, .swiper-button-prev {
+
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 20%;
     }
+
     /* banner */
     .ban,
     .ban img {
@@ -806,153 +585,9 @@ footer p {
     .banner h2 {
         margin-top: 90px;
     }
-
-    /* footer */
-    .footer{
-        padding-top: 40px;
-        padding-bottom: 24px;
-    }
-    .footer_text {
-        margin: 20px 60px 0 60px;
-    }
 }
 
 @media screen and (max-width: 845px) {
-
-    /* -----漢堡選單----- */
-    header .fa-bars {
-        display: inline;
-        line-height: 60px;
-        padding: 20px;
-        color: #634F45;
-    }
-
-    header .fa-xmark {
-        display: none;
-        line-height: 60px;
-        padding: 20px;
-        color: #634F45;
-    }
-
-    header {
-        display: block;
-        height: 60px;
-    }
-
-    header i+i+ul {
-        flex-direction: column;
-        align-items: flex-start;
-        height: calc(100vh - 60px);
-        background-color: #f0f0f0f6;
-        position: fixed;
-        top: 60px;
-        left: -80vw;
-        padding-left: 0;
-        width: 80vw;
-        z-index: 20;
-        transition: .5s;
-    }
-
-    header li {
-        line-height: 50px;
-        width: calc(100% - 21px);
-        padding-left: 20px;
-    }
-
-    header li:nth-child(7){
-        border-bottom: 1px solid rgba(255, 255, 255, .8);
-        padding-bottom: 5px;
-    }
-
-    header li a {
-        text-align: start;
-        padding: 0;
-        display: block;
-    }
-    header .top_logo {
-        position: fixed;
-        top: 0px;
-        left: 46%;
-        width: 60px;
-        padding: 0;
-    }
-    header img {
-        width: 60px;
-    }
-
-    /* 會員&購物車圖示 */
-    header .member {
-        display: block;
-        padding: 0;
-        width: 100%;
-    }   
-
-    header .member li{
-        padding-left: 20px;
-    }
-
-    header .member li a {
-        font-size: 18px;
-        text-align: start;
-        padding: 0;
-    }
-
-    header .member li a::after{
-        content: attr(title);
-        font-size: 16px;
-        padding-left: 10px;
-    }
-
-    /* 子選單 */
-    header .profile_ol {
-        top: 100px;
-        display: none;
-    }
-
-    header .help_ol {
-        top: 150px;
-        display: none;
-    }
-
-    header ol {
-        width: calc(100% - 75px);
-        position: static;
-    }
-
-    header ol li{
-        width: 100%;
-    }
-
-    header ol li a {
-        width: 100%;
-        height: 40px;
-        background-color: transparent;
-        font-size: 14px;
-        padding: 0 10px;
-        margin: 0 6px;
-        line-height: 40px;
-        text-align: start;
-        border-bottom: none;
-        color: #8F7963;
-    }
-    ul>li>a:hover {
-        color: #634F45;
-    }
-
-    .last_a {
-        border-radius: 0;
-    }
-
-    header #profile a::after{
-        content: attr(data-i);
-        padding-left: 8px;
-    }
-
-    header #help a::after{
-        content: attr(data-i);
-        padding-left: 8px;
-    }
-
     /* 活動資訊箭頭 */
     .swiper-button-next,
     .swiper-button-prev {
@@ -962,7 +597,6 @@ footer p {
 
 
 @media screen and (max-width: 750px) {
-
     /* 首圖動畫 */
     .kv {
         max-width: 550px;
@@ -1047,11 +681,13 @@ footer p {
     .activity_main p {
         width: 200px;
     }
-    .activity_main a{
+
+    .activity_main a {
         top: 85%;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 17%;
     }
 
@@ -1065,38 +701,9 @@ footer p {
         margin-top: 70px;
         font-size: 16px;
     }
-
-    /* footer */
-    .footer img {
-        width: 125px;
-    }
-
-    .footer i {
-        font-size: 40px;
-    }
-
-    .footer_text {
-        margin: 20px 60px 0 40px;
-    }
-
-    .footer h3 {
-        margin-bottom: 18px;
-    }
-
-    .footer h4 {
-        line-height: 1.6;
-        font-size: 14px;
-    }
-    .footer a{
-        width: 40px;
-        height: 40px;
-    }
 }
 
 @media screen and (max-width: 580px) {
-    header .top_logo {
-        left: 45%;
-    }
     /* 首圖動畫 */
     .kv {
         max-width: 430px;
@@ -1109,15 +716,23 @@ footer p {
     }
 
     @keyframes imgL {
-        0% {transform: translateY(0)}
-        50% {transform: translateY(10px)}
-        100% {transform: translateY(0)}
+        0% {
+            transform: translateY(0)
+        }
+
+        50% {
+            transform: translateY(10px)
+        }
+
+        100% {
+            transform: translateY(0)
+        }
     }
 
-    .kv_text{
+    .kv_text {
         padding-top: 15px;
     }
-    
+
     .kv h1 {
         font-size: 32px;
     }
@@ -1134,6 +749,7 @@ footer p {
     .news {
         max-width: 430px;
     }
+
     .news_main img {
         width: 370px;
     }
@@ -1153,13 +769,16 @@ footer p {
         width: 200px;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 16%;
     }
+
     /* banner */
     .banner {
         margin-bottom: 40px;
     }
+
     .ban,
     .ban img {
         max-width: 430px;
@@ -1169,49 +788,9 @@ footer p {
         margin-top: 55px;
         font-size: 16px;
     }
-
-    /* footer */
-    .footer{
-        padding-top: 30px;
-    }
-    .footer img {
-        width: 90px;
-        height: 90px;
-        margin-top: 15px;
-    }
-
-    .footer i {
-        font-size: 30px;
-    }
-
-    .footer_text {
-        margin: 20px 40px 0 30px;
-    }
-
-    .footer h3 {
-        margin-bottom: 14px;
-        font-size: 14px;
-    }
-
-    .footer h4 {
-        line-height: 1.6;
-        font-size: 12px;
-    }
-
-    footer p {
-        font-size: 10px;
-    }
-
-    .footer a{
-        width: 30px;
-        height: 30px;
-    }
 }
 
 @media screen and (max-width: 450px) {
-    header .top_logo {
-        left: 44%;
-    }
     /* 首圖動畫 */
     .kv {
         max-width: 365px;
@@ -1223,7 +802,7 @@ footer p {
         top: -15px;
     }
 
-    .kv_text{
+    .kv_text {
         padding-top: 10px;
     }
 
@@ -1231,6 +810,7 @@ footer p {
     .news {
         max-width: 365px;
     }
+
     .news_main img {
         width: 310px;
     }
@@ -1239,7 +819,7 @@ footer p {
         width: 310px;
     }
 
-    .news_text a{
+    .news_text a {
         top: 100%;
     }
 
@@ -1255,13 +835,15 @@ footer p {
         width: 170px;
     }
 
-    .activity_main a{
+    .activity_main a {
         top: 90%;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 13%;
     }
+
     /* banner */
     .ban,
     .ban img {
@@ -1272,39 +854,25 @@ footer p {
         margin-top: 45px;
         font-size: 14px;
     }
-
-    /* footer */
-    .footer{
-        padding-top: 20px;
-    }
-    .footer img {
-        width: 60px;
-        height: 60px;
-        margin-top: 20px;
-    }
-
-    .footer_text {
-        margin: 10px 20px 0 10px;
-    }
 }
 
 @media screen and (max-width: 376px) {
-    header .top_logo {
-        left: 43%;
-    }
     /* 首圖動畫 */
     .kv {
         max-width: 340px;
         padding-bottom: 20px;
     }
+
     .kv .imgL {
         width: 145px;
         top: -5px;
     }
+
     /* 最新消息 */
     .news {
         max-width: 340px;
     }
+
     .news_main img {
         width: 300px;
     }
@@ -1313,34 +881,39 @@ footer p {
         width: 300px;
     }
 
-    .news_text a{
+    .news_text a {
         top: 100%;
     }
 
     /* 活動資訊 */
-    .activity_top_text{
+    .activity_top_text {
         padding-top: 14px;
     }
+
     .activity {
         max-width: 340px;
         padding-bottom: 20px;
     }
+
     .swiper-container {
         height: 420px;
     }
+
     .activity_main img,
     .activity_main h3,
     .activity_main p {
         width: 160px;
     }
 
-    .activity_main a{
+    .activity_main a {
         top: 90%;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         top: 12%;
     }
+
     /* banner */
     .ban,
     .ban img {
@@ -1351,15 +924,4 @@ footer p {
         margin-top: 44px;
         font-size: 14px;
     }
-
-    /* footer */
-    .footer{
-        padding-top: 20px;
-    }
-    .footer img {
-        width: 60px;
-        height: 60px;
-        margin-top: 25px;
-    }
-
 }
