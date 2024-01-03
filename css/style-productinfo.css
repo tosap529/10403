@@ -17,7 +17,7 @@
 }
 
 .swiper {
-    width: 350px;
+    width: 330px;
     height: 330px;
     position: relative;
   }
@@ -95,8 +95,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 button{
+    flex-grow: 1;
     width: 20px;
-    margin: 0 5px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -134,4 +134,112 @@ button{
 .descrip p {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    margin: 0 40px;
+}
+
+/* -----------------------RWD----------------------- */
+
+@media screen and (max-width: 1150px) {
+    .top_info {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top_info {
+        max-width: 850px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .top_info {
+        max-width: 700px;
+    }
+    .pic{
+        margin-right: 0;
+    }
+    .top_info img{
+        margin-right: 0;
+    }
+    .top_info_text{
+        margin: 0 40px;
+    }
+    .shopping{
+        margin-top: 94px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .top_info {
+        max-width: 550px;
+    }
+    .swiper {
+        width: 280px;
+        height: 280px;
+      }
+    .top_info img{
+        width: 280px;
+    }
+    .top_info_text{
+        margin: 0;
+        margin-left: 25px;
+    }
+    .shopping{
+        margin-top: 44px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .top_info {
+        max-width: 430px;
+        display: block;
+        padding-bottom: 40px;
+    }
+    .pic{
+        margin-bottom: 20px;
+    }
+    .top_info_text{
+        margin: 0 90px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .top_info {
+        max-width: 365px;
+    }
+    .shopping{
+        display: block;
+        margin-top: 32px;
+    }
+    .shopL{
+        display: flex;
+        margin-bottom: 12px;
+    }
+    .shopL p{
+        margin-top: 0;
+        margin-left: 16px;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .top_info {
+        max-width: 340px;
+    }
+    .top_info_text{
+        margin: 0 80px;
+    }
+    .shopping{
+        text-align: center;
+    }
+    .shopL{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    .shopL p{
+        margin: 0;
+    }
+    .quantity{
+        margin: 0 auto;
+    }
 }

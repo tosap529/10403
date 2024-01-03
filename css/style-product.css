@@ -37,7 +37,6 @@ main ul{
 }
 
 main ul li{
-    flex-basis: 255px;
     height: 325px;
     margin: 0 25px 40px 25px;
 }
@@ -75,22 +74,157 @@ main ul li:hover p{
 }
 
 /* 下方分頁碼 */
-
-.page{
+.page {
     display: flex;
-    justify-content: right;
-    margin-right: 50%;
+    width: 250px;
+    margin: 0 378px;
 }
 
-.page a{
-    padding: 0 10px;
-    color: black;
-}
-
-.page a:nth-child(3), .page a:nth-child(4){
+.page a {
+    flex-grow: 1;
+    text-align: center;
     color: #B1B1B1;
 }
 
-.page a:hover{
+.page a:first-child,
+.page a:nth-child(2),
+.page a:last-child {
+    color: black;
+}
+
+.page a:hover {
     color: #8F7963;
+}
+
+/* -----------------------RWD----------------------- */
+@media screen and (max-width: 1150px) {
+    /* main */
+    main{
+        display: block;
+        max-width: 1000px;
+    }
+    /* 側邊欄位 */
+    aside{
+        display: flex;
+        margin: 30px auto 20px auto;
+        padding-left:0;
+        justify-content: center;
+    }
+
+    aside h4{
+        padding: 0 15px;
+    }
+    /* 商品主要區域 */
+    main ul{
+        justify-content: center;
+        margin: 10px 40px;
+    }
+    main ul li{
+        margin: 0 10px 30px 10px;
+    }
+    main ul li p{
+        margin-top: 4px;
+    }
+    /* 下方分頁碼 */
+    .page {
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    /* main */
+    main img{
+        width: 230px;
+        height: 230px;
+    }
+    main ul li{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 829px) {
+    /* main */
+    main ul li{
+        margin: 0 30px 30px 30px;
+    }
+    main ul a:last-child{
+        margin-right: 290px;
+    }
+    /* 側邊欄位 */
+    aside{
+        flex-wrap: wrap;
+        margin: 30px 0 20px 5%;
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    /* main */
+    main img{
+        width: 200px;
+        height: 200px;
+    }
+    main ul li{
+        height: 250px;
+    }
+    main ul a:last-child{
+        margin-right: 260px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* main */
+    main ul li{
+        margin: 0 10px 30px 10px;
+    }
+    main ul a:last-child{
+        margin-right: 220px;
+    }
+}
+
+@media screen and (max-width: 529px) {
+    /* main */
+    main ul{
+        margin: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* main */
+    main img{
+        width: 180px;
+        height: 180px;
+    }
+    main ul a:last-child{
+        margin-right: 200px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    /* main */
+    main ul{
+        margin: 10px 4px;
+    }
+    main ul li{
+        margin: 0 6px 30px 6px;
+        height: 230px;
+    }
+    main img{
+        width: 160px;
+        height: 160px;
+    }
+    main ul li h4{
+        font-size: 14px;
+    }
+    main ul a:last-child{
+        margin-right: 170px;
+    }
+    /* 側邊欄位 */
+    aside{
+        margin: 30px 0 20px 2%;
+    }
+    aside h4{
+        padding: 0 10px;
+    }
 }

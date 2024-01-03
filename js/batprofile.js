@@ -6,7 +6,7 @@ pop_up.addEventListener("click", function () {
   lightbox_el.classList.remove("none");
 });
 
-let pop_up_close = document.getElementsByClassName("fa-solid fa-xmark 2")[0];
+let pop_up_close = document.getElementsByClassName("x2")[0];
 pop_up_close.addEventListener("click", function () {
   lightbox_el.classList.add("none");
 });

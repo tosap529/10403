@@ -42,15 +42,22 @@ $(function () {
 
     if (windowWidth <= 845) {
       click_mobile = true
-
+      
     } else {
       click_mobile = false
     }
   }
 
-  $('.main-li-has-menu').click(function () {
+  $('.pd').click(function(e){
     if (click_mobile === true) {
-      console.log('click profile');
+    e.preventDefault()
+    }
+  })
+
+  $('.main-li-has-menu').click(function () {
+    
+    if (click_mobile === true) {
+      //console.log('click li ol');
 
       if ($(this).hasClass('moved1')) {
         $(this).removeClass('moved1');

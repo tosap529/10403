@@ -1,25 +1,26 @@
 // 燈箱
+$(function () {
 
-let lightbox_el = document.getElementById('lightbox');
+let lightbox_el = $('#lightbox');
+let pop_up = $('.pop_up');
 
-let pop_up = document.getElementsByClassName('pop_up')[0];
-pop_up.addEventListener('click', function (e) {
-  lightbox_el.classList.remove('none');
+pop_up.click(function (e) {
+  lightbox_el.removeClass('none');
   e.preventDefault();
 });
 
-let pop_up_close = document.getElementsByClassName('fa-xmark')[0];
-pop_up_close.addEventListener('click', function () {
-  lightbox_el.classList.add('none');
+$('.x2').click(function () {
+  lightbox_el.addClass('none');
 });
 
-
-lightbox_el.addEventListener('click', function () {
-  this.classList.add('none');
+lightbox_el.click(function () {
+  $(this).addClass('none');
 });
 
-lightbox_el.querySelector('article').addEventListener('click', function (e) {
+lightbox_el.find('article').click(function (e) {
   e.stopPropagation();
+});
+
 });
 
 // 點選跳轉到指定區域
@@ -83,6 +84,28 @@ $(function () {
     } else {
       $('.map_list').html('');
     }
+
+    // 燈箱 RWD<=900
+    let lightbox_el = $('#lightbox');
+    let pop_up = $('.pop_upr');
+  
+    pop_up.click(function (e) {
+      lightbox_el.removeClass('none');
+      e.preventDefault();
+    });
+    
+    $('.x2').click(function () {
+      lightbox_el.addClass('none');
+    });
+    
+    lightbox_el.click(function () {
+      $(this).addClass('none');
+    });
+    
+    lightbox_el.find('article').click(function (e) {
+      e.stopPropagation();
+    });
+  
   }
 
   checkWidth();
@@ -92,23 +115,3 @@ $(function () {
   });
 });
 
-// 燈箱 RWD<=900
-$(function () {
-
-  function handleClick() {
-    $('#lightbox').toggleClass('none');
-  }
-  // 初始化
-  $('.pop_upr').on('click', handleClick);
-  $('.fa-xmark').on('click', handleClick);
-
-  $(window).on('resize', function () {
-
-    $('.pop_upr').off('click', handleClick);
-    $('.fa-xmark').off('click', handleClick);
-
-    $('.pop_upr').on('click', handleClick);
-    $('.fa-xmark').on('click', handleClick);
-
-  });
-});
