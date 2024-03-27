@@ -90,9 +90,11 @@ input[type="submit"]:hover {
 .login_input input[type="submit"]+p a:hover {
     color: #8F7963;
 }
+
 /* -----------------------RWD----------------------- */
 
 @media screen and (max-width: 1150px) {
+
     /* main */
     main img {
         width: 420px;
@@ -110,12 +112,13 @@ input[type="submit"]:hover {
     }
 
     .login_input input[type="password"]+p a {
-        bottom: 46%;
+        bottom: 45%;
         right: 2px;
     }
 }
 
 @media screen and (max-width: 1000px) {
+
     /* main */
     main img {
         width: 400px;
@@ -133,11 +136,12 @@ input[type="submit"]:hover {
     }
 
     .login_input input[type="password"]+p a {
-        bottom: 45%;
+        bottom: 43%;
     }
 }
 
 @media screen and (max-width: 900px) {
+
     /* main */
     main img {
         width: 300px;
@@ -166,6 +170,7 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 750px) {
+
     /* main */
     main {
         flex-direction: column;
@@ -191,6 +196,7 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 580px) {
+
     /* main */
     main img {
         width: 330px;
@@ -203,10 +209,12 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 450px) {
+
     /* main */
-    main{
+    main {
         margin: 35px auto 50px auto;
     }
+
     main img {
         width: 300px;
         height: 180px;
@@ -218,6 +226,7 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 376px) {
+
     /* main */
     main img {
         width: 280px;
