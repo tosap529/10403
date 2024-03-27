@@ -112,7 +112,7 @@ input[type="submit"]:hover {
     }
 
     .login_input input[type="password"]+p a {
-        bottom: 45%;
+        bottom: 43%;
         right: 2px;
     }
 }
